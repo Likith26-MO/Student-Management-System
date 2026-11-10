@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Student Portal</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="landing-container">
+        <div class="card welcome-card">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h1>Welcome to the Student Portal</h1>
+            </div>
+            <p class="welcome-text">
+                Manage student records, search by name, and keep the portal up to date. Sign in below to continue to the dashboard.
+            </p>
+
+            <form id="loginForm" class="login-form">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            if (username !== 'GAT' || password !== '54321') {
+                alert('Invalid credentials.');
+                return;
+            }
+            window.location.href = 'app.html';
+        });
+    </script>
+</body>
+</html>

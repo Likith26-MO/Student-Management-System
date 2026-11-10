@@ -1,0 +1,8 @@
+target/
+*.class
+*.log
+*.db
+desktop.ini
+.vscode/
+response_search*.json
+start_error.txt
